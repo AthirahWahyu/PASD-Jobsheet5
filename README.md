@@ -125,6 +125,18 @@ _Jawaban:_
 
     ![Verifikasi7](./Verifikasi7.png)
 
+## - Praktikum 2 : Mengurutkan Data Mahasiswa Berdasarkan IPK (Selection Sort) 
+
+## - Praktikum : Verifikasi Hasil Percobaan 
+
+![Verifikasi8](./Verifikasi8.png)
+
+![Verifikasi9](./Verifikasi9.png)
+
+![Verifikasi10](./Verifikasi10.png)
+
+![Verifikasi11](./Verifikasi11.png)
+
 
 
 
