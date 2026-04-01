@@ -149,6 +149,13 @@ _Jawaban:_
 
 1.  Kode tersebut berfungsi untuk menentukan posisi (indeks) elemen dengan nilai minimum (IPK terkecil), yang nantinya akan ditukar dengan posisi ke-i
 
+## - Praktikum 2 : Mengurutkan Data Mahasiswa Berdasarkan IPK (Insertion Sort) 
+
+## - Praktikum : Verifikasi Hasil Percobaan 
+
+![Verifikasi12](./Verifikasi12.png)
+
+![Verifikasi13](./Verifikasi13.png)
 
 
 
