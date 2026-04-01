@@ -11,3 +11,7 @@
 ## - Praktikum 1 : Verifikasi Hasil Percobaan | SORTING - SELECTION SORT
 
 ![Verifikasi2](./Verifikasi2.png)
+
+## - Praktikum 1 : Verifikasi Hasil Percobaan | SORTING - INSERTION SORT
+
+![Verifikasi3](./Verifikasi3.png)
