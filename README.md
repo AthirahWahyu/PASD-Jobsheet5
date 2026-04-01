@@ -137,6 +137,19 @@ _Jawaban:_
 
 ![Verifikasi11](./Verifikasi11.png)
 
+_Pertanyaan:_
+
+1.  Di dalam method selection sort, terdapat baris program seperti di bawah ini:
+
+![P2P2](./P2P2.png)
+
+Untuk apakah proses tersebut, jelaskan!
+
+_Jawaban:_
+
+1.  Kode tersebut berfungsi untuk menentukan posisi (indeks) elemen dengan nilai minimum (IPK terkecil), yang nantinya akan ditukar dengan posisi ke-i
+
+
 
 
 
