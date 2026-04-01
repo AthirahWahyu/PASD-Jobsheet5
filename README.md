@@ -55,4 +55,78 @@ _Jawaban:_
 
 ![Verifikasi5](./Verifikasi5.png)
 
+_Pertanyaan:_
+
+1.  Perhatikan perulangan di dalam bubbleSort() di bawah ini:
+
+![P2P1](./P2P1.png)
+a.  Mengapa syarat dari perulangan i adalah i < listMhs.length-1?
+b.  Mengapa syarat dari perulangan j adalah j < listMhs.length-i?
+c.  Jika banyak data di dalam listMhs adalah 50, maka berapakali perulangan i akan berlangsung? Dan ada berapa Tahap bubble sort yang ditempuh?
+2.  Modifikasi program diatas dimana data mahasiswa bersifat dinamis (input dari keyboard) yang terdiri dari nim, nama, kelas, dan ipk!
+
+_Jawaban:_
+
+1.  a. Karena hanya butuh n-1 tahap untuk mengurutkan data 
+    b. Karena sebagian data belakang sudah terurut : mengurangi perbandingan 
+    c. Jika ada 50 : 
+        - Perulangan i = 49 kali 
+        - Tahap = 49 tahap 
+2.  Code : 
+
+    ```java
+        package Praktikum05;
+
+        import java.util.Scanner;
+
+        public class MahasiswaDemo3 {
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+
+                MahasiswaBerprestasi3 list = new MahasiswaBerprestasi3();
+
+                System.out.print("Masukkan jumlah mahasiswa: ");
+                int jumlah = sc.nextInt();
+                sc.nextLine(); 
+
+                for (int i = 0; i < jumlah; i++) {
+                    System.out.println("\nData Mahasiswa ke-" + (i+1));
+
+                    System.out.print("NIM   : ");
+                    String nim = sc.nextLine();
+
+                    System.out.print("Nama  : ");
+                    String nama = sc.nextLine();
+
+                    System.out.print("Kelas : ");
+                    String kelas = sc.nextLine();
+
+                    System.out.print("IPK   : ");
+                    double ipk = sc.nextDouble();
+                    sc.nextLine();
+
+                    Mahasiswa3 m = new Mahasiswa3(nim, nama, kelas, ipk);
+                    list.tambah(m);
+                }
+
+                System.out.println("Data mahasiswa sebelum sorting: ");
+                list.tampil();
+
+                System.out.println("\nData Mahasiswa setelah sorting berdasarkan IPK (DESC) : ");
+                list.bubbleSort();
+                list.tampil();
+            }
+        }
+    ```
+
+    Output :
+
+    ![Verifikasi6](./Verifikasi6.png)
+
+    ![Verifikasi7](./Verifikasi7.png)
+
+
+
+
+
 
