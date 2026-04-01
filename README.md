@@ -47,3 +47,12 @@ _Jawaban:_
     - Jadi, kondisi ini berfungsi untuk mencari posisi yang tepat bagi temp dengan cara menggeser semua elemen yang lebih besar ke kanan
 4.  Perintah ini berfungsi untuk menggeser elemen yang lebih besar ke kanan agar memberi tempat bagi elemen yang sedang disisipkan (temp)
 
+## - Praktikum 2 : Mengurutkan Data Mahasiswa Berdasarkan IPK (Bubble Sort) 
+
+## - Praktikum : Verifikasi Hasil Percobaan 
+
+![Verifikasi4](./Verifikasi4.png)
+
+![Verifikasi5](./Verifikasi5.png)
+
+
