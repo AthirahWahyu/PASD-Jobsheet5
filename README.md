@@ -164,7 +164,7 @@ _Pertanyaan:_
 _Jawaban:_
 
 1.  Code pada class MahasiswaBerprestasi3 : 
-    java```
+    ```java
         package Praktikum05;
 
         public class MahasiswaBerprestasi3 {
