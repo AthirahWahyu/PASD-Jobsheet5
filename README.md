@@ -231,11 +231,164 @@ _Jawaban:_
         }
     ```
 
+# Latihan Praktikum
 
+    Code pada class Dosen3 :
+    
+```java
+    public class Dosen3{
+    String kode;
+    String nama;
+    Boolean jenisKelamin;
+    int usia;
 
+    Dosen3(String kd, String name, Boolean jk, int age) {
+        this.kode = kd;
+        this.nama = name;
+        this.jenisKelamin = jk;
+        this.usia = age;
+    }
 
+    void tampil(){
+        System.out.println("Nama: " + nama);
+        System.out.println("Kode: " + kode);
+        System.out.println("Jenis Kelamin: " + (jenisKelamin ? "Laki-Laki" : "Perempuan"));
+        System.out.println("Usia: " + usia);
+    }
+}
+```
 
+    Code pada class DataDosen3 : 
 
+```java 
+    public class DataDosen3 {
+    Dosen3 [] dataDosen3 = new Dosen3 [10];
+    int idx;
+    
+    
+    void tambah(Dosen3 dsn){
+        if (idx < dataDosen3.length) {
+            dataDosen3[idx] = dsn;
+            idx++;
+        }else{
+            System.out.println("Data penuh!");
+        }
+    }
 
+    void tampil(){
+        for (int i = 0; i < idx; i++){
+            dataDosen3[i].tampil();
+            System.out.println("--------------------");
+        }
+    }
 
+    // ASC (termuda - tertua) Bubble Sort
+    void SortingASC(){
+        for (int i = 0; i < idx - 1; i++) {
+            for (int j = 1; j < idx - i; j++) {
+                if (dataDosen3[j].usia < dataDosen3[j-1].usia) {
+                    Dosen3 temp = dataDosen3[j];
+                    dataDosen3[j] = dataDosen3[j-1];
+                    dataDosen3[j-1] = temp;
+                } 
+            }
+        }
+    }
 
+    // DSC (tertua - termuda) Selection Sort 
+    void SortingDSC(){
+        for (int i = 0; i < idx - 1; i++) {
+            int idxMax = i;
+            for (int j = i + 1; j < idx; j++) {
+                if (dataDosen3[j].usia > dataDosen3[idxMax].usia) {
+                    idxMax = j;   
+                }
+            }
+            Dosen3 temp = dataDosen3[i];
+            dataDosen3[i] = dataDosen3[idxMax];
+            dataDosen3[idxMax] = temp;
+        }
+    }
+}
+
+```
+
+    Code pada class Dosen3Demo : 
+```java 
+    import java.util.Scanner;
+
+    public class Dosen3Demo {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+
+            DataDosen3 list = new DataDosen3();
+
+            int pilih;
+
+            do {
+                System.out.println("\n----- MENU DATA DOSEN -----");
+                System.out.println("1. Tambah Data");
+                System.out.println("2. Tampil Data");
+                System.out.println("3. Sorting ASC (Usia termuda - tertua)");
+                System.out.println("4. Sorting DSC (Usia tertua - termuda)");
+                System.out.println("5. Keluar");
+                System.out.print("Pilih menu: ");
+                pilih = Integer.parseInt(sc.nextLine());
+
+                switch (pilih) {
+                    case 1:
+                        System.out.print("Kode      : ");
+                        String kode = sc.nextLine();
+
+                        System.out.print("Nama      : ");
+                        String nama = sc.nextLine();
+
+                        boolean jk;
+                        while (true) {
+                            System.out.print("Jenis Kelamin (L/P): ");
+                            String input = sc.nextLine().trim();
+
+                            if (input.equalsIgnoreCase("L")) {
+                                jk = true;
+                                break;
+                            } else if (input.equalsIgnoreCase("P")) {
+                                jk = false;
+                                break;
+                            } else {
+                                System.out.println("Input harus L atau P!");
+                            }    
+                        }
+
+                        System.out.print("Usia      : ");
+                        int usia = Integer.parseInt(sc.nextLine());
+
+                        Dosen3 d = new Dosen3(kode, nama, jk, usia);
+                        list.tambah(d);
+                        break;
+                    
+                    case 2: 
+                        System.out.println("\nData Dosen: ");
+                        list.tampil();
+                        break;
+
+                    case 3:
+                        list.SortingASC();
+                        System.out.println("Data berhasil diurutkan ASC!");
+                        break;
+                    
+                    case 4:
+                        list.SortingDSC();
+                        System.out.println("Data berhasil diurutkan DSC!");
+                        break;
+                    
+                    case 5: 
+                        System.out.println("Terima kasih!");
+                        break;
+
+                    default:
+                        System.out.println("Pilihan tidak valid!");
+                }
+            } while (pilih != 5);
+        } 
+    }
+```
